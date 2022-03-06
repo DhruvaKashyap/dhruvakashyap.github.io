@@ -1,0 +1,23 @@
+@import "styles_org.css";
+
+.main{
+    text-align: center;
+}
+
+.content
+{
+  text-align: justify;
+  margin: auto;
+  width: 70%;
+}
+
+.avatar{
+    position: relative;
+    float:left;
+}
+
+.pages{
+  text-align:justify;
+  margin:auto;
+  width:80%;
+}
