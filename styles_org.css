@@ -13,6 +13,14 @@ a:hover {
   color: inherit;
 }
 
+img{
+  background-color: white;
+}
+
+.src{
+  color: black;
+  background-color: white;
+}
 
 /* From https://stackoverflow.com/a/31951412 */
 .marquee {

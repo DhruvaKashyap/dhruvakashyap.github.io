@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-06-24 Fri 11:15 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neural Networks where they don't belong</title>
+<meta name="author" content="Dhruva Kashyap" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="../../../styles_org.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Neural Networks where they don&rsquo;t belong</h1>
+
+
+<div id="outline-container-orgc85a4be" class="outline-2">
+<h2 id="orgc85a4be"><span class="section-number-2">1.</span> The advent of Neural Networks</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-center">
+<p>
+At first, there was McCulloch-Pitts, then Hinton said, let there be backpropagation.
+</p>
+</div>
+
+<p>
+This comparison of Hinton to the Christian story of creation is well deserved. Until his paper on back-propagation[<a href="#org953b31a">1</a>] was published, people thought Artificial Neural Networks(ANNs) was a dead-end based on works from Minsky[<a href="#org11bf10e">2</a>].
+But even with this conceptual breakthrough, it was very difficult to usefully apply ANNs. Until&#x2026;
+</p>
+
+<blockquote>
+<p>
+The number of transistors that can be placed on an integrated circuit double every two years.
+</p>
+</blockquote>
+
+<p>
+Moore&rsquo;s law had finally grown enough for hardware to catch up to the requirements of training neural networks.
+The rest, as they say, is history. Whether anyone likes it or not, NNs are here to stay. They are all around us, in forms we may not even be aware of, in our cars[<a href="https://www.tesla.com/AI">https://www.tesla.com/AI</a>], in the games we play[<a href="https://deepmind.com/research/case-studies/alphago-the-story-so-far">https://deepmind.com/research/case-studies/alphago-the-story-so-far</a>], in our financial institutes and maybe even in Starbucks? [<a href="https://stories.starbucks.com/stories/2020/how-starbucks-plans-to-use-technology-to-nurture-the-human-spirit/">https://stories.starbucks.com/stories/2020/how-starbucks-plans-to-use-technology-to-nurture-the-human-spirit/</a>].
+</p>
+
+<p>
+With all this context, I would like to try some experiments on ANNs, to try to gain an understanding of how these black boxes behave.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6a98d11" class="outline-2">
+<h2 id="org6a98d11"><span class="section-number-2">2.</span> René Descartes and the Intel i7</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Plane geometry is a subject that we are taught at a very young age, probably the first thing we are taught is the number line.
+</p>
+
+
+<div id="orgdb7599a" class="figure">
+<p><img src="./static/numberline.png" alt="numberline.png" width="70%" />
+</p>
+<p><span class="figure-number">Figure 1: </span>A number line [<a href="#org1d4936d">3</a>]</p>
+</div>
+
+<p>
+Telling a positive number from a negative number is a pretty trivial task, don&rsquo;t worry, I won&rsquo;t be using a neural network for that. In 2 dimensions we have a plane and instead of positive and negative, we have four quadrants, each quadrant describing the sign of the two numbers describing a point.
+</p>
+
+
+<div id="org20d89ab" class="figure">
+<p><img src="./static/cart.png" alt="cart.png" width="20%" />
+</p>
+<p><span class="figure-number">Figure 2: </span>2-D Cartesian plane [<a href="#org9061c2d">4</a>]</p>
+</div>
+
+<p>
+I will be running you through a neural network that classifies 2 numbers into these 4 quadrants of the plane. I hear you, you can write this function in less than a minute, I&rsquo;ll show my implementations of them right here.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #339CDB;">def</span> <span style="color: #D9DAA2;">model</span>(x: <span style="color: #C586C0;">float</span>, y: <span style="color: #C586C0;">float</span>) -&gt; <span style="color: #C586C0;">int</span>:
+    <span style="color: #777778;">"""Return quadrant of point (x,y) in 2 D."""</span>
+    <span style="color: #85DDFF;">a</span> = x &gt; <span style="color: #B5CEA8; font-weight: bold;">0</span>
+    <span style="color: #85DDFF;">b</span> = y &gt; <span style="color: #B5CEA8; font-weight: bold;">0</span>
+    <span style="color: #339CDB;">if</span> a &amp; b:
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">1</span>
+    <span style="color: #339CDB;">elif</span> (~a) &amp; b:
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">2</span>
+    <span style="color: #339CDB;">elif</span> a &amp; (~b):
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">4</span>
+    <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">3</span>
+</pre>
+</div>
+
+<p>
+Or even in C
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #579C4C;">// </span><span style="color: #579C4C;">Return quadrant of point (x,y) in 2 D.</span>
+<span style="color: #35CDAF;">int</span> <span style="color: #D9DAA2;">model</span><span style="color: #C586C0;">(</span><span style="color: #35CDAF;">double</span> <span style="color: #85DDFF;">x</span>, <span style="color: #35CDAF;">double</span> <span style="color: #85DDFF;">y</span><span style="color: #C586C0;">)</span>
+<span style="color: #C586C0;">{</span>
+    <span style="color: #35CDAF;">bool</span> <span style="color: #85DDFF;">a</span> = x &gt; <span style="color: #B5CEA8; font-weight: bold;">0</span>;
+    <span style="color: #35CDAF;">bool</span> <span style="color: #85DDFF;">b</span> = y &gt; <span style="color: #B5CEA8; font-weight: bold;">0</span>;
+    <span style="color: #339CDB;">if</span> <span style="color: #DB8E73;">(</span>a &amp; b<span style="color: #DB8E73;">)</span>
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">1</span>;
+    <span style="color: #339CDB;">else</span> <span style="color: #339CDB;">if</span> <span style="color: #DB8E73;">(</span><span style="color: #579C4C;">(</span><span style="color: #85DDFF; font-weight: bold;">!</span>a<span style="color: #579C4C;">)</span> &amp; b<span style="color: #DB8E73;">)</span>
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">2</span>;
+    <span style="color: #339CDB;">else</span> <span style="color: #339CDB;">if</span> <span style="color: #DB8E73;">(</span>a &amp; <span style="color: #579C4C;">(</span><span style="color: #85DDFF; font-weight: bold;">!</span>b<span style="color: #579C4C;">)</span><span style="color: #DB8E73;">)</span>
+        <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">4</span>;
+    <span style="color: #339CDB;">return</span> <span style="color: #B5CEA8; font-weight: bold;">3</span>;
+<span style="color: #C586C0;">}</span>
+</pre>
+</div>
+
+<p>
+This is a solved problem! Why are we trying to solve this?? This is even faster than any neural network! You might even use a decision tree or K nearest neighbors if you don&rsquo;t have anything to do. But why NNs?
+</p>
+
+<p>
+The answer is simple, this blog is a study of how we can study the behavior and architecture of Nets needed to solve this.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4002703" class="outline-2">
+<h2 id="org4002703"><span class="section-number-2">3.</span> To code or not to code</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+For this exercise, I shall be using <a href="https://www.tensorflow.org/">TensorFlow</a> to write up the program. I shall be running the program on Google Colab&rsquo;s generous free GPU.
+The notebook will be available on my <a href="http://www.github.com/DhruvaKashyap">GitHub</a>.
+</p>
+
+<p>
+Now there is an intuition we can use here:
+</p>
+
+<ul class="org-ul">
+<li>The quadrant doesn&rsquo;t depend on the value, just the sign of the values</li>
+</ul>
+
+<p>
+An obvious way of abusing this intuition is to &ldquo;augment&rdquo; the data to just be binary(\Re<sup>2</sup>&rArr; {0,1}<sup>2</sup>) to give a hint to the model, but this would not be fair. But the binary intuition seems right, all the information can be represented in 2 bits. So maybe there should be 2 units in the hidden layer.
+</p>
+
+<p>
+What about the activation function? Well, maybe we can use this to somehow indicate a sign? Enter the soft-sign activation.
+</p>
+
+
+<div id="org64f458a" class="figure">
+<p><img src="./static/softsign.png" alt="softsign.png" width="30%" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Soft-sign activation vs Tanh activation [<a href="#org959e18e">5</a>]</p>
+</div>
+
+<p>
+soft-sign can be expressed as:
+</p>
+
+<p>
+softsign\left(x\right) = \left(\frac{x}{|x|+1}\right)
+</p>
+
+<p>
+Now, all we have left is to train the model we&rsquo;ll have to tune the optimizer and learning rate, but this is an exercise left to the reader, the writer has spent too much time on it and would like to share their misery. This is what the model looks like:
+</p>
+
+
+<div id="org4e7386c" class="figure">
+<p><img src="./static/model.png" alt="model.png" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Model architecture</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3aa95f9" class="outline-2">
+<h2 id="org3aa95f9"><span class="section-number-2">4.</span> Data, oh data</h2>
+<div class="outline-text-2" id="text-4">
+<blockquote>
+<p>
+It is the struggle itself that is most important. We must strive to be more than we are. It does not matter that we will never reach our ultimate goal. The effort yields its own rewards.
+</p>
+
+<p>
+– Lt. Cmdr. Data,
+Star Trek: The Next Generation, &ldquo;The Offspring&rdquo;
+</p>
+</blockquote>
+
+<p>
+This is a really easy thing, for our experiment we&rsquo;re using 2 dimensional normal data with mean 0 and variance 30 and a simple 80-10-10 train-val-test split. But an interesting study here would be to use different distributions, skewed, uniform, Poisson, etc., and try to make the model learn. Maybe even combinations of these distributions and see the performance during training.
+</p>
+
+
+<div id="org8a06e55" class="figure">
+<p><img src="./static/data.png" alt="data.png" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Visualization of data-set.</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org36dbad8" class="outline-2">
+<h2 id="org36dbad8"><span class="section-number-2">5.</span> Results</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+If you decide to go on a hyper-parameter search journey, you will notice the following a lot.
+</p>
+
+<ul class="org-ul">
+<li>The model gets stuck on 25%</li>
+<li>The model gets stuck on 50%</li>
+<li>The model gets stuck on 75%</li>
+</ul>
+
+<p>
+Now, there&rsquo;s a very obvious reason why this is happening, here is an interesting visualization:
+</p>
+
+
+<div id="orgea55237" class="figure">
+<p><img src="./static/50.png" alt="50.png" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Visualization of a model which is 50% accurate</p>
+</div>
+
+<p>
+That looks very weird but extremely interesting, but if you see the weights of the matrix, they approximately look like:
+</p>
+
+<div class="org-center">
+\begin{bmatrix}
+0.5 & 1 \\
+0.5 & -1
+\end{bmatrix}
+</div>
+
+<p>
+Cool right?
+</p>
+
+<p>
+Now let&rsquo;s get to business, what do we see when we get 100%(approx) accuracy?
+The plot is going to look something like the data distribution itself, but the learned weights are very interesting. The following are some weights of the 2 linear units that are optimal, approximated.
+</p>
+
+<div class="org-center">
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+</div>
+<p>
+<br />
+</p>
+<div class="org-center">
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}
+</div>
+
+<p>
+What we can see is that these weights are very simply matrix transformations like identity((x,y)-&gt;(x,y)) and negate flip((x,y)-&gt;(-y,x))!
+The activation function squishes the numbers to be 1 or -1, and the last layer just has to learn the right combination which is a trivial linear equation and has infinite solutions!
+<b><b>Notice that the determinant of all these matrices has been 1.</b></b>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgb98ebb5" class="outline-2">
+<h2 id="orgb98ebb5"><span class="section-number-2">6.</span> Concluding remarks</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+This has been a study of neural networks, applied to an extraordinarily trivial task, and we have been able to observe some very interesting observations. This was inspired by an experiment in Tom Mitchell&rsquo;s seminal textbook, Machine Learning[<a href="#orgd4a0569">6</a>], in section 4.6.4, Hidden layer representation.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org281ef70" class="outline-2">
+<h2 id="org281ef70"><span class="section-number-2">7.</span> References</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li><a id="org953b31a"></a> Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1986) Learning representations by back-propagating errors. Nature, 323, 533&#x2013;536.</li>
+
+<li><a id="org11bf10e"></a> Minsky, Marvin; Papert, Seymour (1969). Perceptrons: An Introduction to Computational Geometry.
+MIT Press. ISBN 978-0-262-63022-1.</li>
+
+<li><a id="org1d4936d"></a> By Hakunamenta - Own work, CC0, <a href="https://commons.wikimedia.org/w/index.php?curid=20206520">https://commons.wikimedia.org/w/index.php?curid=20206520</a></li>
+
+<li><a id="org9061c2d"></a> By K. Bolino - Made by K. Bolino (Kbolino), based upon earlier versions., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=869195">https://commons.wikimedia.org/w/index.php?curid=869195</a></li>
+
+<li><a id="org959e18e"></a> <a href="https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/">https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/</a></li>
+
+<li><a id="orgd4a0569"></a>  Mitchell, T. M. (1997). Machine Learning. New York: McGraw-Hill. ISBN: 978-0-07-042807-2</li>
+</ol>
+
+<br>
+<p style="text-align:center">
+    This web page is hosted by GitHub, much thanks to them! Please support open source developers if you can!
+    <div class="marquee">
+    <p>
+        When is this website from?
+        <span style="color: green">2</span><span style="color: yellow">0</span><span style="color: orange">0</span><span style="color: red">0</span>
+        ? Web 1.0 much?
+    </p>
+    </div>
+    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2021-09-10 Fri 00:00</p>
+<p class="author">Author: Dhruva Kashyap</p>
+<p class="date">Created: 2022-06-24 Fri 11:15</p>
+</div>
+</body>
+</html>
