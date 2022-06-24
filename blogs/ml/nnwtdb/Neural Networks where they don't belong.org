@@ -3,7 +3,7 @@
 #+EMAIL: dhruva12kashyap@gmail.com
 #+DATE: <2021-09-10 Fri>
 #+LANGUAGE: en
-#+EXPORT_FILE_NAME: nnwtdb.html
+#+EXPORT_FILE_NAME: index.html
 #+OPTIONS: toc:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../../styles_org.css" />
 
