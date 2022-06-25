@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-24 Fri 11:15 -->
+<!-- 2022-06-25 Sat 10:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Neural Networks where they don't belong</title>
@@ -221,8 +221,8 @@
 <h1 class="title">Neural Networks where they don&rsquo;t belong</h1>
 
 
-<div id="outline-container-orgc85a4be" class="outline-2">
-<h2 id="orgc85a4be"><span class="section-number-2">1.</span> The advent of Neural Networks</h2>
+<div id="outline-container-org71078f9" class="outline-2">
+<h2 id="org71078f9"><span class="section-number-2">1.</span> The advent of Neural Networks</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-center">
 <p>
@@ -231,7 +231,7 @@ At first, there was McCulloch-Pitts, then Hinton said, let there be backpropagat
 </div>
 
 <p>
-This comparison of Hinton to the Christian story of creation is well deserved. Until his paper on back-propagation[<a href="#org953b31a">1</a>] was published, people thought Artificial Neural Networks(ANNs) was a dead-end based on works from Minsky[<a href="#org11bf10e">2</a>].
+This comparison of Hinton to the Christian story of creation is well deserved. Until his paper on back-propagation[<a href="#org39a97e4">1</a>] was published, people thought Artificial Neural Networks(ANNs) was a dead-end based on works from Minsky[<a href="#org1bbdec9">2</a>].
 But even with this conceptual breakthrough, it was very difficult to usefully apply ANNs. Until&#x2026;
 </p>
 
@@ -252,29 +252,30 @@ With all this context, I would like to try some experiments on ANNs, to try to g
 </div>
 </div>
 
-<div id="outline-container-org6a98d11" class="outline-2">
-<h2 id="org6a98d11"><span class="section-number-2">2.</span> René Descartes and the Intel i7</h2>
+<div id="outline-container-org35aefa5" class="outline-2">
+<h2 id="org35aefa5"><span class="section-number-2">2.</span> René Descartes and the Intel i7</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Plane geometry is a subject that we are taught at a very young age, probably the first thing we are taught is the number line.
 </p>
 
 
-<div id="orgdb7599a" class="figure">
-<p><img src="./static/numberline.png" alt="numberline.png" width="70%" />
+<div id="org10e5688" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Number-line.svg" alt="Number-line.svg" class="org-svg" width="70%" />
 </p>
-<p><span class="figure-number">Figure 1: </span>A number line [<a href="#org1d4936d">3</a>]</p>
+<p><span class="figure-number">Figure 1: </span>A number line [<a href="#org65ad0ac">3</a>]</p>
 </div>
+
 
 <p>
 Telling a positive number from a negative number is a pretty trivial task, don&rsquo;t worry, I won&rsquo;t be using a neural network for that. In 2 dimensions we have a plane and instead of positive and negative, we have four quadrants, each quadrant describing the sign of the two numbers describing a point.
 </p>
 
 
-<div id="org20d89ab" class="figure">
-<p><img src="./static/cart.png" alt="cart.png" width="20%" />
+<div id="orgf49ae25" class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Cartesian-coordinate-system.svg" alt="Cartesian-coordinate-system.svg" class="org-svg" width="20%" />
 </p>
-<p><span class="figure-number">Figure 2: </span>2-D Cartesian plane [<a href="#org9061c2d">4</a>]</p>
+<p><span class="figure-number">Figure 2: </span>2-D Cartesian plane [<a href="#org3e78ccf">4</a>]</p>
 </div>
 
 <p>
@@ -327,8 +328,8 @@ The answer is simple, this blog is a study of how we can study the behavior and 
 </div>
 </div>
 
-<div id="outline-container-org4002703" class="outline-2">
-<h2 id="org4002703"><span class="section-number-2">3.</span> To code or not to code</h2>
+<div id="outline-container-orgcbee062" class="outline-2">
+<h2 id="orgcbee062"><span class="section-number-2">3.</span> To code or not to code</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 For this exercise, I shall be using <a href="https://www.tensorflow.org/">TensorFlow</a> to write up the program. I shall be running the program on Google Colab&rsquo;s generous free GPU.
@@ -352,10 +353,10 @@ What about the activation function? Well, maybe we can use this to somehow indic
 </p>
 
 
-<div id="org64f458a" class="figure">
-<p><img src="./static/softsign.png" alt="softsign.png" width="30%" />
+<div id="org7d33ab1" class="figure">
+<p><img src="https://i0.wp.com/sefiks.com/wp-content/uploads/2017/11/softsign.png?resize=371%2C264&amp;ssl=1" alt="softsign.png?resize=371%2C264&amp;ssl=1" width="30%" />
 </p>
-<p><span class="figure-number">Figure 3: </span>Soft-sign activation vs Tanh activation [<a href="#org959e18e">5</a>]</p>
+<p><span class="figure-number">Figure 3: </span>Soft-sign activation vs Tanh activation [<a href="#org6703639">5</a>]</p>
 </div>
 
 <p>
@@ -371,7 +372,7 @@ Now, all we have left is to train the model we&rsquo;ll have to tune the optimiz
 </p>
 
 
-<div id="org4e7386c" class="figure">
+<div id="org9c7e882" class="figure">
 <p><img src="./static/model.png" alt="model.png" />
 </p>
 <p><span class="figure-number">Figure 4: </span>Model architecture</p>
@@ -380,8 +381,8 @@ Now, all we have left is to train the model we&rsquo;ll have to tune the optimiz
 </div>
 
 
-<div id="outline-container-org3aa95f9" class="outline-2">
-<h2 id="org3aa95f9"><span class="section-number-2">4.</span> Data, oh data</h2>
+<div id="outline-container-orge1a8c31" class="outline-2">
+<h2 id="orge1a8c31"><span class="section-number-2">4.</span> Data, oh data</h2>
 <div class="outline-text-2" id="text-4">
 <blockquote>
 <p>
@@ -399,7 +400,7 @@ This is a really easy thing, for our experiment we&rsquo;re using 2 dimensional 
 </p>
 
 
-<div id="org8a06e55" class="figure">
+<div id="org342b66c" class="figure">
 <p><img src="./static/data.png" alt="data.png" />
 </p>
 <p><span class="figure-number">Figure 5: </span>Visualization of data-set.</p>
@@ -408,8 +409,8 @@ This is a really easy thing, for our experiment we&rsquo;re using 2 dimensional 
 </div>
 
 
-<div id="outline-container-org36dbad8" class="outline-2">
-<h2 id="org36dbad8"><span class="section-number-2">5.</span> Results</h2>
+<div id="outline-container-orgb84e6ac" class="outline-2">
+<h2 id="orgb84e6ac"><span class="section-number-2">5.</span> Results</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 If you decide to go on a hyper-parameter search journey, you will notice the following a lot.
@@ -426,7 +427,7 @@ Now, there&rsquo;s a very obvious reason why this is happening, here is an inter
 </p>
 
 
-<div id="orgea55237" class="figure">
+<div id="org1bf1b9c" class="figure">
 <p><img src="./static/50.png" alt="50.png" />
 </p>
 <p><span class="figure-number">Figure 6: </span>Visualization of a model which is 50% accurate</p>
@@ -477,31 +478,31 @@ The activation function squishes the numbers to be 1 or -1, and the last layer j
 </div>
 
 
-<div id="outline-container-orgb98ebb5" class="outline-2">
-<h2 id="orgb98ebb5"><span class="section-number-2">6.</span> Concluding remarks</h2>
+<div id="outline-container-orgfc61d90" class="outline-2">
+<h2 id="orgfc61d90"><span class="section-number-2">6.</span> Concluding remarks</h2>
 <div class="outline-text-2" id="text-6">
 <p>
-This has been a study of neural networks, applied to an extraordinarily trivial task, and we have been able to observe some very interesting observations. This was inspired by an experiment in Tom Mitchell&rsquo;s seminal textbook, Machine Learning[<a href="#orgd4a0569">6</a>], in section 4.6.4, Hidden layer representation.
+This has been a study of neural networks, applied to an extraordinarily trivial task, and we have been able to observe some very interesting observations. This was inspired by an experiment in Tom Mitchell&rsquo;s seminal textbook, Machine Learning[<a href="#org37b1ff4">6</a>], in section 4.6.4, Hidden layer representation.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org281ef70" class="outline-2">
-<h2 id="org281ef70"><span class="section-number-2">7.</span> References</h2>
+<div id="outline-container-orgfdaa6ad" class="outline-2">
+<h2 id="orgfdaa6ad"><span class="section-number-2">7.</span> References</h2>
 <div class="outline-text-2" id="text-7">
 <ol class="org-ol">
-<li><a id="org953b31a"></a> Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1986) Learning representations by back-propagating errors. Nature, 323, 533&#x2013;536.</li>
+<li><a id="org39a97e4"></a> Rumelhart, D. E., Hinton, G. E., and Williams, R. J. (1986) Learning representations by back-propagating errors. Nature, 323, 533&#x2013;536.</li>
 
-<li><a id="org11bf10e"></a> Minsky, Marvin; Papert, Seymour (1969). Perceptrons: An Introduction to Computational Geometry.
+<li><a id="org1bbdec9"></a> Minsky, Marvin; Papert, Seymour (1969). Perceptrons: An Introduction to Computational Geometry.
 MIT Press. ISBN 978-0-262-63022-1.</li>
 
-<li><a id="org1d4936d"></a> By Hakunamenta - Own work, CC0, <a href="https://commons.wikimedia.org/w/index.php?curid=20206520">https://commons.wikimedia.org/w/index.php?curid=20206520</a></li>
+<li><a id="org65ad0ac"></a> By Hakunamenta - Own work, CC0, <a href="https://commons.wikimedia.org/w/index.php?curid=20206520">https://commons.wikimedia.org/w/index.php?curid=20206520</a></li>
 
-<li><a id="org9061c2d"></a> By K. Bolino - Made by K. Bolino (Kbolino), based upon earlier versions., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=869195">https://commons.wikimedia.org/w/index.php?curid=869195</a></li>
+<li><a id="org3e78ccf"></a> By K. Bolino - Made by K. Bolino (Kbolino), based upon earlier versions., Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=869195">https://commons.wikimedia.org/w/index.php?curid=869195</a></li>
 
-<li><a id="org959e18e"></a> <a href="https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/">https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/</a></li>
+<li><a id="org6703639"></a> <a href="https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/">https://sefiks.com/2017/11/10/softsign-as-a-neural-networks-activation-function/</a></li>
 
-<li><a id="orgd4a0569"></a>  Mitchell, T. M. (1997). Machine Learning. New York: McGraw-Hill. ISBN: 978-0-07-042807-2</li>
+<li><a id="org37b1ff4"></a>  Mitchell, T. M. (1997). Machine Learning. New York: McGraw-Hill. ISBN: 978-0-07-042807-2</li>
 </ol>
 
 <br>
@@ -522,7 +523,7 @@ MIT Press. ISBN 978-0-262-63022-1.</li>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-09-10 Fri 00:00</p>
 <p class="author">Author: Dhruva Kashyap</p>
-<p class="date">Created: 2022-06-24 Fri 11:15</p>
+<p class="date">Created: 2022-06-25 Sat 10:35</p>
 </div>
 </body>
 </html>

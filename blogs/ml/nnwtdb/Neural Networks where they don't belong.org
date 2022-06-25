@@ -33,14 +33,15 @@ Plane geometry is a subject that we are taught at a very young age, probably the
 #+CAPTION: A number line [[[3]]]
 #+NAME: Figure 1
 #+ATTR_HTML: :width 70%
-[[./static/numberline.png]]
+[[https://upload.wikimedia.org/wikipedia/commons/9/93/Number-line.svg]]
+
 
 Telling a positive number from a negative number is a pretty trivial task, don't worry, I won't be using a neural network for that. In 2 dimensions we have a plane and instead of positive and negative, we have four quadrants, each quadrant describing the sign of the two numbers describing a point.
 
 #+CAPTION: 2-D Cartesian plane [[[4]]]
 #+NAME: Figure 2
 #+ATTR_HTML: :width 20%
-[[./static/cart.png]]
+[[https://upload.wikimedia.org/wikipedia/commons/0/0e/Cartesian-coordinate-system.svg]]
 
 I will be running you through a neural network that classifies 2 numbers into these 4 quadrants of the plane. I hear you, you can write this function in less than a minute, I'll show my implementations of them right here.
 
@@ -96,7 +97,7 @@ What about the activation function? Well, maybe we can use this to somehow indic
 #+CAPTION: Soft-sign activation vs Tanh activation [[[5]]]
 #+NAME: Figure 3
 #+ATTR_HTML: :width 30%
-[[./static/softsign.png]]
+[[https://i0.wp.com/sefiks.com/wp-content/uploads/2017/11/softsign.png?resize=371%2C264&ssl=1]]
 
 soft-sign can be expressed as:
 
