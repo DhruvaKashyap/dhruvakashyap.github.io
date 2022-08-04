@@ -20,6 +20,9 @@ Why are the links green? I like green.
 
 I felt all the pages should have a common banner at the end. And I felt the marquee tag has felt enough damage. The plea for open source developers came from me watching many interesting talks from Benno Rice. Especially his talk on [[https://www.youtube.com/watch?v=BCqGjGzWI48][The New COBOL]].
 
+* What font is this?
+
+Cool, Isn't it? All credits to Professor Vinod Ganapathy at IISc[https://csa.iisc.ac.in/~vg]. I got the font from his page.
 #+BEGIN_EXPORT html
 <br>
 <p style="text-align:center">

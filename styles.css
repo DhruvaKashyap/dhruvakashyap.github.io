@@ -21,3 +21,7 @@
   margin:auto;
   width:80%;
 }
+/* Credits to prof Vinod Ganapathy https://csa.iisc.ac.in/~vg/ for the font from his website */
+*{
+  font-family: "Computer Modern", "Times", "Helvetica", "Arial", "Georgia";
+}
