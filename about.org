@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<!-- 2022-12-20 Tue 21:56 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About</title>
-<meta name="author" content="Dhruva Kashyap" />
-<meta name="generator" content="Org Mode" />
-<link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
-</head>
-<body>
-<div id="content" class="content">
+#+title: About
+#+EXPORT_FILE_NAME: about.html
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
+#+BEGIN_EXPORT html
 <big><a href="index.html">Dhruva Kashyap</a></big>
     <h2>About Me</h2>
     <br /><br />
@@ -49,29 +39,6 @@
     <br /><br />
     I am a big fan of Star Wars. A character I really like is <a href="blogs/star_wars.html" style="color: inherit; text-decoration:none">Admiral Raddus</a>, who made his appearance in "Rogue One: A Star Wars Story."
     </div>
+#+END_EXPORT
 
-<div class="footer">
-  <div style="text-align:center">
-    This web page is hosted by GitHub, much thanks to them! Please support open source developers if you can!
-    <div class="marquee">
-      <p>
-        When is this website from?
-        <span style="color: green">2</span><span style="color: yellow">0</span><span style="color: orange">0</span><span style="color: red">0</span> ? Web 1.0 much?
-      </p>
-    </div>
-  </div>
-
-  <a href="http://www.anybrowser.org/campaign/"><img src="icons/anyweb-8831.png" alt="Viewable With Any Browser" /></a>
-  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
-  <small>Built with <a href="https://www.gnu.org/software/emacs/">emacs</a></small>
-  <br />
-  <script type="text/javascript">
-    document.writeln ("This page was last updated " + document.lastModified);
-    <!-- Code from https://info.sice.indiana.edu/~hrosenba/Demo/javascript/6update.html-->
-  </script>
-  <br />
-  <small><a href="index.html">Dhruva Kashyap</a> 2022</small>
-</div>
-</div>
-</body>
-</html>
+#+INCLUDE: "./footer.html" export html
