@@ -1,5 +1,5 @@
 #+title: Projects
-#+EXPORT_FILE_NAME: ../projects.html
+#+EXPORT_FILE_NAME: projects.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
 

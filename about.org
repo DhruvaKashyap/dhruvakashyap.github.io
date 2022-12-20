@@ -1,5 +1,5 @@
-#+title: About
-#+EXPORT_FILE_NAME: ../about.html
+#+title: About Me
+#+EXPORT_FILE_NAME: about.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
 #+BEGIN_EXPORT html
@@ -40,6 +40,7 @@
     <br /><br />
     I am a big fan of Star Wars. A character I really like is <a href="blogs/star_wars.html" style="color: inherit; text-decoration:none">Admiral Raddus</a>, who made his appearance in "Rogue One: A Star Wars Story."
     </div>
+    <br /><br />
 </div>
 #+END_EXPORT
 

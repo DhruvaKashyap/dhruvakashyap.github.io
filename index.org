@@ -1,5 +1,5 @@
 #+title: Dhruva Kashyap
-#+EXPORT_FILE_NAME: ../index.html
+#+EXPORT_FILE_NAME: index.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
 #+BEGIN_EXPORT html
