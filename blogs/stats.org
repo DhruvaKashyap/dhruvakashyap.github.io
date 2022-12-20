@@ -1,0 +1,16 @@
+#+TITLE: A Copenhagen for Math
+#+EXPORT_FILE_NAME: war.html
+#+OPTIONS: toc:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
+
+* Statistics needs to have something that does what the Copenhagen Interpretation did to Quantum Mechanics
+
+ML/AI is waste without it.
+
+#+BEGIN_EXPORT html
+<br>
+<span style="color:blue">Слава</span><span style="color:yellow"> Україні</span>
+<p style="text-align:center">
+    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
+</p>
+#+END_EXPORT

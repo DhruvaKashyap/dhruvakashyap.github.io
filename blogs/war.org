@@ -1,0 +1,33 @@
+#+TITLE: On the war in Ukraine
+#+EXPORT_FILE_NAME: war.html
+#+OPTIONS: toc:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
+
+* On the war in Ukraine
+
+It is February 2022. War has broken out between Russia and Ukraine after Russia recognised the Donetsk and Luhansk regions as independent regions.
+I am clearly not qualified to make any comments on the developing situation. But it is clear to see that the Kremlin has been the aggressor in this situation. Vladimir Putin and his Ilk have bought forth a war to Europe. To quote the current UN Secretary-General António Guterres pleaded to Putin: "Give peace a chance."
+
+* As an Indian
+
+I am conflicted. I have never seen war. I was fortunate to be born in the most peaceful period in human history. I'd like to believe that the natural state of humanity is not of war, naive as it may seem. Although the idealist that I am, I am unsure of my own country's stance on the issue. We abstained from the UN Security council meeting to condemn the war. I understand the reasons why my government did this. But I wish we could do more. I hope the country of Gandhi can continue being a voice for peace.
+
+* The future
+
+I am writing this on 27th February 2022, 11:30 PM IST. I am no sure what the future holds. I hope that civilians in Ukraine stop dying. I wish for people to feel safe again. The pandemic has drained us all. I hope we can see reason. I hope tumultuous times are not ahead. I hope.
+
+* References
+
+I understand that the current media/news system as not at a good point in terms of trust-worthiness. But here are a few good sources:
+
+- [[https://apnews.com/article/united-nations-general-assembly-russia-ukraine-europe-russia-united-nations-31c5af31d2a72163676459d317269b35][AP News article on the war]]
+- [[https://www.bbc.com/news/live/world-europe-60454795?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=6217ca57000e9e34d25a7ba4%26What%27s%20the%20latest%3F%262022-02-24T18%3A33%3A13.709Z&ns_fee=0&pinned_post_locator=urn:asset:becba973-98df-4728-bcce-9f0e082111d9&pinned_post_asset_id=6217ca57000e9e34d25a7ba4][BBC News article]]
+- [[https://news.un.org/en/story/2022/02/1112802][UN Council press on the Security Council vote]]
+
+#+BEGIN_EXPORT html
+<br>
+<span style="color:blue">Слава</span><span style="color:yellow"> Україні</span>
+<p style="text-align:center">
+    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
+</p>
+#+END_EXPORT
