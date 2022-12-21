@@ -1,0 +1,67 @@
+.main{
+    text-align: center;
+}
+.content
+{
+  text-align: justify;
+  margin: auto;
+  width: 70%;
+}
+
+.avatar{
+    position: relative;
+    float:left;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.pages{
+  text-align:justify;
+  margin:auto;
+  width:80%;
+}
+/* Credits to prof Vinod Ganapathy https://csa.iisc.ac.in/~vg/ for the font from his website */
+*{
+  font-family: "Computer Modern", "Times", "Helvetica", "Arial", "Georgia";
+}
+
+body {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
+
+a, a:visited, a:active {
+  color: green;
+}
+
+a:hover {
+  color: inherit;
+}
+
+img{
+  background-color: white;
+}
+
+.src{
+  color: black;
+  background-color: white;
+}
+
+/* From https://stackoverflow.com/a/31951412 */
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+/* Many thanks for the css, Thomas Bormans. */
