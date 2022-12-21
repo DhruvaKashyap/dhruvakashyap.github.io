@@ -6,7 +6,7 @@
 <h3><a href="./">Dhruva Kashyap</a></h3>
 <div class="main">
     <h2>A collection of a collection of words</h2>
-    <br><br>
+    <br /><br />
     <div class="pages">
         I write things when I can because I enjoy doing them. If you read anything here, I hope it is enjoyable to you.
         Please let me know if you think I'm wrong about something! (like a typo). I tend to write them in <a href="https://orgmode.org/">Org</a> and export them to HTML. This is my personal website, so everything here is personal and doesn't reflect the views of anyone else.
