@@ -1,0 +1,37 @@
+#+title: My Blog
+#+EXPORT_FILE_NAME: index.html
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" href="../static/styles.css"></link>
+#+BEGIN_EXPORT html
+<h3><a href="../index.html">Dhruva Kashyap</a></h3>
+<div class="main">
+    <h2>A collection of a collection of words</h2>
+    <br><br>
+    <div class="pages">
+        I write things when I can because I enjoy doing them. If you read anything here, I hope it is enjoyable to you.
+        Please let me know if you think I'm wrong about something! (like a typo). I tend to write them in <a href="https://orgmode.org/">Org</a> and export them to HTML. This is my personal website, so everything here is personal and doesn't reflect the views of anyone else.
+
+        <h4><a href="website.html">Why is this Web Site so bad?</a></h4>
+        <p>
+            TL;DR: I don't like JavaScript, am too lazy to use CSS well, and need help figuring out how to use static site generators.
+        </p>
+
+        <h4><a href="war.html">On the war in Ukraine</a></h4>
+        <p>
+            UPDATE[Dec 2022]: I wrote this sometime when the war started and updated it a few weeks later.
+            However, it has been almost a year, and things are pretty bad. I still wish that the suffering ends.
+            The nuances of this war are far too many for me to be talking about.
+            I wrote this tiny piece a while ago, and it is wrong of me to keep it up without updating it.
+            However, I do not have the time or knowledge to do justice. Hence, sometime in the future, I will remove it.
+            However, it will still be archived on <a href="https://github.com/DhruvaKashyap/dhruvakashyap.github.io">the public GitHub repository</a> on which this website is hosted.
+        </p>
+
+        <h4><a href="movies.html">Movies</a></h4>
+        <p>
+            I love movies and the cinema.
+        </p>
+      </div>
+    </div>
+#+END_EXPORT
+
+#+INCLUDE: "../footer.html" export html

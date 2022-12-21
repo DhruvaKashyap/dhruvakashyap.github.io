@@ -1,5 +1,5 @@
 #+title: Projects
-#+EXPORT_FILE_NAME: projects.html
+#+EXPORT_FILE_NAME: ../site/projects.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
@@ -34,4 +34,4 @@
     </div>
 #+END_EXPORT
 
-#+INCLUDE: "./footer.html" export html
+#+INCLUDE: "footer.html" export html

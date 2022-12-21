@@ -1,5 +1,5 @@
 #+title: About Me
-#+EXPORT_FILE_NAME: about.html
+#+EXPORT_FILE_NAME: ../site/about.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
@@ -14,7 +14,7 @@
     I finished my Undergraduate Bachelor's degree in Computer Science and Engineering from <a href="https://pes.edu">PES University</a>.
     As of writing this(December 2022), I am pursuing a Master's in Computer Science and Engineering from CSA, <a href="https://iisc.ac.in">IISc</a>.
     <br /><br />
-    This is the <a href="gpg.txt" title="GPG Key">GPG Key</a> that I am currently using. Please manage your keys well. Read the <a href="https://www.gnupg.org/gph/en/manual.html">GNU Privacy Handbook</a> to learn more.
+    This is the <a href="static/gpg.txt" title="GPG Key">GPG Key</a> that I am currently using. Please manage your keys well. Read the <a href="https://www.gnupg.org/gph/en/manual.html">GNU Privacy Handbook</a> to learn more.
     <br /><br />
     I use <a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a> to write everything you have seen. Many thanks, Henrik!
     <br /><br />
@@ -44,4 +44,4 @@
 </div>
 #+END_EXPORT
 
-#+INCLUDE: "./footer.html" export html
+#+INCLUDE: "footer.html" export html
