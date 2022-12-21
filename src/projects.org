@@ -3,7 +3,7 @@
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
-    <h3><a href="index.html">Dhruva Kashyap</a></h3>
+    <h3><a href="/">Dhruva Kashyap</a></h3>
     <div class="main">
       <h2>My Projects</h2>
       <br /><br />

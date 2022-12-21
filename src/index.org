@@ -5,7 +5,7 @@
 #+BEGIN_EXPORT html
 
 <div class="avatar">
-<a href="index.html"><img src="static/images/avatar.jpg" alt="avatar" /></a>
+<a href="/"><img src="static/images/avatar.jpg" alt="avatar" /></a>
 <p style="font-size: 23px"> A photo of me, circa 2018</p>
 <a href="mailto:kdhruva@iisc.ac.in"><img width="50" alt="Mail" src="static/images/mail.png" style="background:black" /></a>
 <a href="https://github.com/DhruvaKashyap"><img width="50" alt="Github" src="static/images/github.png" style="background:black" /></a>
@@ -39,7 +39,7 @@
         Starting projects is easy. However, through many accidents of my own making, I have finished only a few of them, and you'll find me writing about them <a href="projects.html">here</a>
         <br /><br />
 
-        On the rare occasions on which I feel like writing something down, I will write them <a href="blogs/index.html">here</a>
+        On the rare occasions on which I feel like writing something down, I will write them <a href="blogs/">here</a>
         <br /><br />
 
         I don't use social media for many reasons, so please email me if you want to talk!
