@@ -17,6 +17,10 @@ all: build
 
 build: $(HTML_FILES)
 
+publish: build
+	git checkout page
+	git checkout main $(HTML_FILES)
+
 $(SRC)/footer.html: $(SRC)/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
 
