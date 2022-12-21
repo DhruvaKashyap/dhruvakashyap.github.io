@@ -12,7 +12,7 @@ HTML_FILES=site/index.html site/about.html site/projects.html
 
 all: footer.html setup $(HTML_FILES) $(ORG_FILES)
 	git checkout site
-	cp -r site/ .
+	mv site/* .
 	rmdir site/
 	git checkout main
 	rm -rf site/
