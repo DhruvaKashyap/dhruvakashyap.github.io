@@ -18,10 +18,10 @@ build: $(HTML_FILES)
 publish: build
 	git add -A
 	@read -p "Commit message: " msg;
-	git commit -m $$msg
+	git commit -m $msg
 	git checkout page
 	git checkout main $(HTML_FILES)
-	git commit -m $$msg
+	git commit -m $msg
 	git checkout main
 
 $(SRC)/footer.html: $(SRC)/footer.org
