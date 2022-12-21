@@ -6,20 +6,23 @@
 # Modified from https://stackoverflow.com/a/22091045
 
 SRC=src
-
 HTML_FILES_ALL=$(patsubst $(SRC)/%.org, %.html,$(wildcard $(SRC)/*.org))
 HTML_FILES=$(filter-out footer.html, $(HTML_FILES_ALL))
-$(info $$HTML_FILES is [${HTML_FILES}])
 
-.PHONY: all clean publish build
+.PHONY: clean publish build
 
 all: build
 
 build: $(HTML_FILES)
 
 publish: build
+	git add -A
+	@read -p "Commit message: " msg;
+	git commit -m $$msg
 	git checkout page
 	git checkout main $(HTML_FILES)
+	git commit -m $$msg
+	git checkout main
 
 $(SRC)/footer.html: $(SRC)/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
