@@ -25,9 +25,11 @@ publish: build
 	git checkout main
 
 $(SRC)/footer.html: $(SRC)/footer.org
+	rm $@
 	emacs $< --batch -f org-babel-tangle --kill
 
 %.html:  $(SRC)/%.org $(SRC)/footer.html
+	rm $@
 	emacs $< --batch -f org-html-export-to-html --kill
 
 clean:
