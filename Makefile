@@ -17,10 +17,7 @@ publish: setup $(HTML_FILES)
 	git checkout site
 	mv site/* .
 	rmdir site/
-	git checkout main
-	rm -rf site/
-	rm *.html
-	git checkout site
+	rm -rf src/
 
 src/footer.html: src/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
