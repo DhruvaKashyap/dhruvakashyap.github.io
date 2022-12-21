@@ -1,5 +1,5 @@
 #+TITLE: That galaxy, the one far far away
-#+EXPORT_FILE_NAME: star_wars.html
+#+EXPORT_FILE_NAME: ../../site/blogs/star_wars.html
 #+OPTIONS: toc:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
 How have you stumbled here weary wanderer?

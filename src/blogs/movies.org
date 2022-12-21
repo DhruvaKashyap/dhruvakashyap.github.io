@@ -1,5 +1,5 @@
 #+TITLE: The art and craft of Cinema
-#+EXPORT_FILE_NAME: movies.html
+#+EXPORT_FILE_NAME: ../../site/blogs/movies.html
 #+OPTIONS: toc:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
 * The great spectacle of cinema

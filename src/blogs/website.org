@@ -1,5 +1,5 @@
 #+TITLE: Why is this Web Site so bad?
-#+EXPORT_FILE_NAME: website.html
+#+EXPORT_FILE_NAME: ../../site/blogs/website.html
 #+OPTIONS: toc:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
 

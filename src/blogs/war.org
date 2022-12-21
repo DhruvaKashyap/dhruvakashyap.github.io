@@ -1,5 +1,5 @@
 #+TITLE: On the war in Ukraine
-#+EXPORT_FILE_NAME: war.html
+#+EXPORT_FILE_NAME: ../../site/blogs/war.html
 #+OPTIONS: toc:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
 
