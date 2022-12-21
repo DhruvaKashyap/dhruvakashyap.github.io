@@ -11,6 +11,11 @@ HTML_FILES=site/index.html site/about.html site/projects.html
 .PHONY: all clean setup
 
 all: footer.html setup $(HTML_FILES) $(ORG_FILES)
+	git checkout site
+	cp -r site/ .
+	rmdir site/
+	git checkout main
+	rm -rf site/
 
 footer.html: src/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
