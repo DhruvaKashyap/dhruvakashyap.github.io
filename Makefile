@@ -5,28 +5,33 @@
 # @version 0.1
 # Modified from https://stackoverflow.com/a/22091045
 
-ORG_FILES=src/index.org src/about.org src/projects.org
 HTML_FILES=site/index.html site/about.html site/projects.html
 
-.PHONY: all clean setup
+.PHONY: all clean setup publish build
 
-all: footer.html setup $(HTML_FILES) $(ORG_FILES)
+all: build
+
+build: setup src/footer.html $(HTML_FILES)
+
+publish: $(HTML_FILES)
 	git checkout site
 	mv site/* .
 	rmdir site/
 	git checkout main
 	rm -rf site/
+	rm *.html
+	git checkout site
 
-footer.html: src/footer.org
+src/footer.html: src/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
 
-site/%.html: src/%.org footer.html setup
+site/%.html: src/%.org src/footer.html
 	emacs $< --batch -f org-html-export-to-html --kill
 
 setup:
 	mkdir -p site
 
 clean:
-	rm src/footer.html
+	rm *.html src/footer.html
 	rm -rf site/
 # end
