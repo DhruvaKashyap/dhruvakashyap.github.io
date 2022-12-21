@@ -22,7 +22,9 @@ publish: build
 	git checkout page
 	git checkout main $(HTML_FILES)
 	git commit -m $msg
+	git push
 	git checkout main
+	git push
 
 $(SRC)/footer.html: $(SRC)/footer.org
 	rm $@
