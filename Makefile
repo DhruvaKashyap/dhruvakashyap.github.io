@@ -11,9 +11,9 @@ HTML_FILES=site/index.html site/about.html site/projects.html
 
 all: build
 
-build: setup src/footer.html $(HTML_FILES)
+build: setup $(HTML_FILES)
 
-publish: $(HTML_FILES)
+publish: setup $(HTML_FILES)
 	git checkout site
 	mv site/* .
 	rmdir site/
