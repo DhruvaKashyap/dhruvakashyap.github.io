@@ -19,5 +19,5 @@ footer.html: footer.org
 	emacs $< --batch -f org-html-export-to-html --kill
 
 clean:
-	rm *.html
+	rm *.html *.html~
 # end

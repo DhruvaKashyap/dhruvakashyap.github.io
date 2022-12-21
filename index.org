@@ -1,14 +1,14 @@
 #+title: Dhruva Kashyap
 #+EXPORT_FILE_NAME: index.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" href="styles.css"></link> <!--<link rel="icon" href="static/favicon.jpg" type="image/x-icon">-->
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
 
 <div class="avatar">
-<a href="index.html"><img src="static/avatar.jpg" alt="avatar" /></a>
+<a href="index.html"><img src="static/images/avatar.jpg" alt="avatar" /></a>
 <p style="font-size: 23px"> A photo of me, circa 2018</p>
-<a href="mailto:kdhruva@iisc.ac.in"><img width="50" alt="Mail" src="icons/mail.png" style="background:black" /></a>
-<a href="https://github.com/DhruvaKashyap"><img width="50" alt="Github" src="icons/github.png" style="background:black" /></a>
+<a href="mailto:kdhruva@iisc.ac.in"><img width="50" alt="Mail" src="static/images/mail.png" style="background:black" /></a>
+<a href="https://github.com/DhruvaKashyap"><img width="50" alt="Github" src="static/images/github.png" style="background:black" /></a>
 <a href="https://keybase.io/dhruva_kashyap"><!--"Keybase, BSD &lt;http://opensource.org/licenses/bsd-license.php&gt;, via Wikimedia Commons"--><img width="50" alt="Keybase" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Keybase_logo_official.svg/128px-Keybase_logo_official.svg.png" style="background:black" /></a>
 </div>
 
