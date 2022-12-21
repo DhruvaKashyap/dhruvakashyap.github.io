@@ -1,3 +1,5 @@
+#+title: Footer
+#+BEGIN_SRC html :tangle footer.html
 <div class="footer">
   <div style="text-align:center">
     This web page is hosted by GitHub, much thanks to them! Please support open source developers if you can!
@@ -26,3 +28,4 @@
   <br />
   <small><a href="index.html">Dhruva Kashyap</a> 2022</small>
 </div>
+#+END_SRC
