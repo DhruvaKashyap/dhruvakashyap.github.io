@@ -36,9 +36,9 @@
         <li>Lone wolf and Cub(子連れ狼), by writer Kazuo Koike and artist Goseki Kojima</li>
     </ul>
     I also love watching the cinema. Some of my favorite Directors are Francis Ford Coppola, Stanley Kubrick, Akira Kurosawa, George Lucas,
-    Martin Scorsese, Steven Spielberg, Bong Joon-Ho, Alfred Hitchcock, Katheryn Bigelow, Quentin Tarantino, Hayao Miyazaki, and many more. I talk more <a href="blogs/movies.html">here.</a>
+    Martin Scorsese, Steven Spielberg, Bong Joon-Ho, Alfred Hitchcock, Katheryn Bigelow, Quentin Tarantino, Hayao Miyazaki, and many more. I talk more <a href="movies.html">here.</a>
     <br /><br />
-    I am a big fan of Star Wars. A character I really like is <a href="blogs/star_wars.html" style="color: inherit; text-decoration:none">Admiral Raddus</a>, who made his appearance in "Rogue One: A Star Wars Story."
+    I am a big fan of Star Wars. A character I really like is <a href="star_wars.html" style="color: inherit; text-decoration:none">Admiral Raddus</a>, who made his appearance in "Rogue One: A Star Wars Story."
     </div>
     <br /><br />
 </div>

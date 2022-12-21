@@ -8,7 +8,7 @@
 SRC=src
 
 HTML_FILES_ALL=$(patsubst $(SRC)/%.org, %.html,$(wildcard $(SRC)/*.org))
-HTML_FILES=$(filter-out site/footer.html, $(HTML_FILES_ALL))
+HTML_FILES=$(filter-out footer.html, $(HTML_FILES_ALL))
 $(info $$HTML_FILES is [${HTML_FILES}])
 
 .PHONY: all clean publish build

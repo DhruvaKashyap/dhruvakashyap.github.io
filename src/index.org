@@ -39,13 +39,13 @@
         Starting projects is easy. However, through many accidents of my own making, I have finished only a few of them, and you'll find me writing about them <a href="projects.html">here</a>
         <br /><br />
 
-        On the rare occasions on which I feel like writing something down, I will write them <a href="blogs/">here</a>
+        On the rare occasions on which I feel like writing something down, I will write them <a href="blog.html">here</a>
         <br /><br />
 
         I don't use social media for many reasons, so please email me if you want to talk!
         <br /><br />
         <p>
-        <a href="blogs/war.html"><span style="color:blue">Слава</span><span style="color:yellow"> Україні</span></a>
+        <a href="war.html"><span style="color:blue">Слава</span><span style="color:yellow"> Україні</span></a>
         </p>
         <br /><br />
     </div>
