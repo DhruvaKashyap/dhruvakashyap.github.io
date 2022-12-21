@@ -9,9 +9,10 @@ SRC=src
 OUT_DIR=site
 
 
-HTML_FILES=$(patsubst $(SRC)/%.org, $(OUT_DIR)/%.html,$(wildcard $(SRC)/*.org))
-HTML_FILES+=$(patsubst $(SRC)/blogs/%.org, $(OUT_DIR)/blogs/%.html,$(wildcard $(SRC)/blogs/*.org))
-#$(info $$HTML_FILES is [${HTML_FILES}])
+HTML_FILES_ALL=$(patsubst $(SRC)/%.org, $(OUT_DIR)/%.html,$(wildcard $(SRC)/*.org))
+HTML_FILES_ALL+=$(patsubst $(SRC)/blogs/%.org, $(OUT_DIR)/blogs/%.html,$(wildcard $(SRC)/blogs/*.org))
+HTML_FILES=$(filter-out site/footer.html, $(HTML_FILES_ALL))
+$(info $$HTML_FILES is [${HTML_FILES}])
 
 .PHONY: all clean setup publish build
 
@@ -28,10 +29,10 @@ publish: setup $(HTML_FILES)
 $(SRC)/footer.html: $(SRC)/footer.org
 	emacs $< --batch -f org-babel-tangle --kill
 
-$(OUT_DIR)/%.html: $(SRC)/%.org $(SRC)/footer.html
+$(OUT_DIR)/%.html: $(SRC)/footer.html $(SRC)/%.org
 	emacs $< --batch -f org-html-export-to-html --kill
 
-$(OUT_DIR)/blogs/%.html: $(SRC)/blogs/%.org $(SRC)/footer.html
+$(OUT_DIR)/blogs/%.html: $(SRC)/footer.html $(SRC)/blogs/%.org
 	emacs $< --batch -f org-html-export-to-html --kill
 
 setup:
