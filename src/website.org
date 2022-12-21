@@ -1,7 +1,7 @@
 #+TITLE: Why is this Web Site so bad?
-#+EXPORT_FILE_NAME: ../../site/blogs/website.html
-#+OPTIONS: toc:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
+#+EXPORT_FILE_NAME: ../website.html
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 
 * Between a rock and a hard place
 
@@ -23,17 +23,5 @@ I felt all the pages should have a common banner at the end. And I felt the marq
 * What font is this?
 
 Cool, Isn't it? All credits to Professor Vinod Ganapathy at IISc[https://csa.iisc.ac.in/~vg]. I got the font from his page.
-#+BEGIN_EXPORT html
-<br>
-<p style="text-align:center">
-    This web page is hosted by GitHub, much thanks to them! Please support open source developers if you can!
-    <div class="marquee">
-    <p>
-        When is this website from?
-        <span style="color: green">2</span><span style="color: yellow">0</span><span style="color: orange">0</span><span style="color: red">0</span>
-        ? Web 1.0 much?
-    </p>
-    </div>
-    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
-</p>
-#+END_EXPORT
+
+#+INCLUDE: "footer.html" export html

@@ -1,9 +1,9 @@
 #+title: About Me
-#+EXPORT_FILE_NAME: ../site/about.html
+#+EXPORT_FILE_NAME: ../about.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
-<big><a href="/">Dhruva Kashyap</a></big>
+<big><a href="./">Dhruva Kashyap</a></big>
 <div class="main">
     <h2 style="">About Me</h2>
     <br /><br />

@@ -1,7 +1,7 @@
 #+TITLE: That galaxy, the one far far away
-#+EXPORT_FILE_NAME: ../../site/blogs/star_wars.html
-#+OPTIONS: toc:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
+#+EXPORT_FILE_NAME: ../star_wars.html
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="static/styles.css" />
 How have you stumbled here weary wanderer?
 * I like star wars
 I was 12 years old when I saw A new hope for the firs time, the ideal age to enjoy that movie. It used play on the television sometime in March, right during my year end exams, but I never missed it.
@@ -11,17 +11,5 @@ Over the years I have learned more about George Lucas's philosophy for star wars
 Andor. Go watch it.
 * Not that much
 If I were to distill my love for Star wars, I would say: "I know what Aurebesh is, but I don't speak it." I initially intended on having a bit of Aurebesh text, but rendering it was too much of a pain.
-#+BEGIN_EXPORT html
-<br>
-<p style="text-align:center">
-    This web page is hosted by GitHub, much thanks to them! Please support open source developers if you can!
-    <div class="marquee">
-    <p>
-        When is this website from?
-        <span style="color: green">2</span><span style="color: yellow">0</span><span style="color: orange">0</span><span style="color: red">0</span>
-        ? Web 1.0 much?
-    </p>
-    </div>
-    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
-</p>
-#+END_EXPORT
+
+#+INCLUDE: "footer.html" export html

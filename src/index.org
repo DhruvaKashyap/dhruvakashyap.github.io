@@ -1,11 +1,11 @@
 #+title: Dhruva Kashyap
-#+EXPORT_FILE_NAME: ../site/index.html
+#+EXPORT_FILE_NAME: ../index.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
 
 <div class="avatar">
-<a href="/"><img src="static/images/avatar.jpg" alt="avatar" /></a>
+<a href="./"><img src="static/images/avatar.jpg" alt="avatar" /></a>
 <p style="font-size: 23px"> A photo of me, circa 2018</p>
 <a href="mailto:kdhruva@iisc.ac.in"><img width="50" alt="Mail" src="static/images/mail.png" style="background:black" /></a>
 <a href="https://github.com/DhruvaKashyap"><img width="50" alt="Github" src="static/images/github.png" style="background:black" /></a>

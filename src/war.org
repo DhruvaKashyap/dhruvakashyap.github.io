@@ -1,7 +1,7 @@
 #+TITLE: On the war in Ukraine
-#+EXPORT_FILE_NAME: ../../site/blogs/war.html
-#+OPTIONS: toc:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../styles_org.css" />
+#+EXPORT_FILE_NAME: ../war.html
+#+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 
 * On the war in Ukraine
 
@@ -24,10 +24,4 @@ I understand that the current media/news system as not at a good point in terms 
 - [[https://www.bbc.com/news/live/world-europe-60454795?ns_mchannel=social&ns_source=twitter&ns_campaign=bbc_live&ns_linkname=6217ca57000e9e34d25a7ba4%26What%27s%20the%20latest%3F%262022-02-24T18%3A33%3A13.709Z&ns_fee=0&pinned_post_locator=urn:asset:becba973-98df-4728-bcce-9f0e082111d9&pinned_post_asset_id=6217ca57000e9e34d25a7ba4][BBC News article]]
 - [[https://news.un.org/en/story/2022/02/1112802][UN Council press on the Security Council vote]]
 
-#+BEGIN_EXPORT html
-<br>
-<span style="color:blue">Слава</span><span style="color:yellow"> Україні</span>
-<p style="text-align:center">
-    <small><a href="../index.html">Dhruva Kashyap</a> 2022</small>
-</p>
-#+END_EXPORT
+#+INCLUDE: "footer.html" export html

@@ -26,6 +26,6 @@
     document.writeln ("This page was last updated on: " + new Date(document.lastModified));
   </script>
   <br />
-  <small><a href="/">Dhruva Kashyap</a> 2022</small>
+  <small><a href="./">Dhruva Kashyap</a> 2022</small>
 </div>
 #+END_SRC

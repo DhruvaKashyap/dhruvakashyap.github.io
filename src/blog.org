@@ -1,9 +1,9 @@
 #+title: My Blog
-#+EXPORT_FILE_NAME: ../../site/blogs/index.html
+#+EXPORT_FILE_NAME: ../blog.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" href="../static/styles.css"></link>
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
 #+BEGIN_EXPORT html
-<h3><a href="../index.html">Dhruva Kashyap</a></h3>
+<h3><a href="./">Dhruva Kashyap</a></h3>
 <div class="main">
     <h2>A collection of a collection of words</h2>
     <br><br>
@@ -34,4 +34,4 @@
     </div>
 #+END_EXPORT
 
-#+INCLUDE: "../footer.html" export html
+#+INCLUDE: "footer.html" export html
