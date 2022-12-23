@@ -30,7 +30,7 @@ $(SRC)/footer.html: $(SRC)/footer.org
 	rm $@
 	emacs $< --batch -f org-babel-tangle --kill
 
-%.html:  $(SRC)/%.org $(SRC)/footer.html
+%.html:  $(SRC)/%.org $(SRC)/footer.html static/styles.css
 	rm $@
 	emacs $< --batch -f org-html-export-to-html --kill
 

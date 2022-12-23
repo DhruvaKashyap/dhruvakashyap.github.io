@@ -1,7 +1,7 @@
 #+TITLE: The art and craft of Cinema
 #+EXPORT_FILE_NAME: ../movies.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css" />
 * The great spectacle of cinema
 This page is still a work in progress
 ** Why film is beautiful

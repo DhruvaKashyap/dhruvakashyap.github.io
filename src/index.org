@@ -1,7 +1,7 @@
 #+title: Dhruva Kashyap
 #+EXPORT_FILE_NAME: ../index.html
 #+OPTIONS: toc:nil html-postamble:nil html-preamble:nil title:nil html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css"></link>
+#+HTML_HEAD: <link rel="stylesheet" href="static/styles.css" />
 #+BEGIN_EXPORT html
 
 <div class="avatar">
@@ -17,7 +17,7 @@
 
 <div class="main">
 
-    <div class="content">
+    <div class="heads">
         I'm a Junior year Graduate student in Computer Science and Engineering at the Department of <a href="https://www.csa.iisc.ac.in/">Computer Science and Automation</a>, <a href="https://iisc.ac.in/">IISc</a>, Bengaluru.
         <br /><br />
 
