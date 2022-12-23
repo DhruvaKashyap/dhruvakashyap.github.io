@@ -16,12 +16,12 @@ all: build
 build: $(HTML_FILES)
 
 publish: build
-	git add -A
-	@read -p "Commit message: " msg;
-	git commit -m $msg
-	git checkout page
-	git checkout main $(HTML_FILES)
-	git commit -m $msg
+	git add -A;\
+	read -p "Commit message: " msg;\
+	git commit -m $$msg;\
+	git checkout page;\
+	git checkout main $(HTML_FILES);\
+	git commit -m $$msg;\
 	git push origin page
 	git checkout main
 	git push
