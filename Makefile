@@ -22,7 +22,7 @@ publish: build
 	git checkout page
 	git checkout main $(HTML_FILES)
 	git commit -m $msg
-	git push
+	git push origin page
 	git checkout main
 	git push
 
