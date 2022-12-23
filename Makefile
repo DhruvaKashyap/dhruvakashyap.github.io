@@ -20,7 +20,7 @@ publish: build
 	read -p "Commit message: " msg;\
 	git commit -m $$msg;\
 	git checkout page;\
-	git checkout main $(HTML_FILES);\
+	git checkout main $(HTML_FILES) static/;\
 	git commit -m $$msg;\
 	git push origin page
 	git checkout main
