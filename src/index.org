@@ -44,10 +44,6 @@
 
         I don't use social media for many reasons, so please email me if you want to talk!
         <br /><br />
-        <p>
-        <a href="war.html"><span style="color:blue">Слава</span><span style="color:yellow"> Україні</span></a>
-        </p>
-        <br /><br />
     </div>
 </div>
 #+END_EXPORT

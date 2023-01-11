@@ -27,13 +27,13 @@ publish: build
 	git push
 
 $(SRC)/footer.html: $(SRC)/footer.org
-	rm $@
+	rm -f $@
 	emacs $< --batch -f org-babel-tangle --kill
 
 %.html:  $(SRC)/%.org $(SRC)/footer.html static/styles.css
-	rm $@
+	rm -f $@
 	emacs $< --batch -f org-html-export-to-html --kill
 
 clean:
-	rm *.html $(SRC)/footer.html
+	rm  -f *.html $(SRC)/footer.html
 # end
