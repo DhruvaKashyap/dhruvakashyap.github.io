@@ -29,6 +29,11 @@
           demonstrate a project for a course on reinforcement Learning. What better way to spend our time than playing old Atari games?
           <a href="https://github.com/sumukhaithal6/Enduro-Imitation-Learning">[Code]</a>
         </p>
+          <h4>IP=PSPACE</h4>
+        <p>
+        My first foray into Theoretical CS. A presentation I made about the seminal result in complexity theory for a course in Computational Complexity Theory. This was a great dive into the unknown world of complexity theory for me at the time. I came out enlightened about the vastness of things I did not know that were so foundational to computer Science. <a href="static/Interactive_proofs.pdf">[PDF]</a>
+        </p>
+
       </div>
       <br /><br />
     </div>
