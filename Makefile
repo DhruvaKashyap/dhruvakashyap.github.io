@@ -28,11 +28,11 @@ publish: build
 
 $(SRC)/footer.html: $(SRC)/footer.org
 	rm -f $@
-	emacs $< --batch -f org-babel-tangle --kill
+	./gen_html $<
 
 %.html:  $(SRC)/%.org $(SRC)/footer.html static/styles.css
 	rm -f $@
-	emacs $< --batch -f org-html-export-to-html --kill
+	./gen_org $<
 
 clean:
 	rm  -f *.html $(SRC)/footer.html

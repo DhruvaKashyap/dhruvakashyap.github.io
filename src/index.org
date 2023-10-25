@@ -18,7 +18,7 @@
 <div class="main">
 
     <div class="heads">
-        I'm a Junior year Graduate student in Computer Science and Engineering at the Department of <a href="https://www.csa.iisc.ac.in/">Computer Science and Automation</a>, <a href="https://iisc.ac.in/">IISc</a>, Bengaluru.
+        I'm a Senior year Graduate student in Computer Science and Engineering at the Department of <a href="https://www.csa.iisc.ac.in/">Computer Science and Automation</a>, <a href="https://iisc.ac.in/">IISc</a>, Bengaluru.
         <br /><br />
 
         More <a href="about.html">about me</a>!!
@@ -31,7 +31,7 @@
     </div>
     <br /><br />
     <div>
-        My <a href="static/Dhruva_Kashyap_resume.pdf">Resume</a> if you want to learn how *not* to write one.
+        My <a href="static/Dhruva_Kashyap_CV.pdf">CV</a> if you want to learn how *not* to write one.
         <br />
         It was last updated in January 2022, so if you have lived through much since then, let this be evidence of my laziness.
         <br /><br />
